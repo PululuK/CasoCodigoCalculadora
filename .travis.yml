@@ -1,0 +1,27 @@
+language: php
+
+os: linux
+dist: trusty
+
+php:
+  - 5.6
+
+stages:
+  - name: deploy
+    if: type = cron
+  - name: test
+    if: type IN (push, pull_request)
+
+script:
+  - bash test.sh;
+after_script:
+  - sudo cat script_out.log
+
+# Customize when the notification emails are sent.
+notifications:
+   on_success: never
+   on_failure: always
+   
+# After a build, send email notification with the build results
+notifications:
+ email: pululuandre@hotmail.com
