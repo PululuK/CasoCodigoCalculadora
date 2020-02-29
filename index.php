@@ -1,5 +1,5 @@
 <?php
 
   echo "test";
-   $objeto = array()
+   $objeto = array("algo"=>array("alguma coisa","outro algo"));
   echo "kkk";
