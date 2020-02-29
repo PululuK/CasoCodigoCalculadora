@@ -1,6 +1,6 @@
 #!/bin/bash
 
-php -l index.php
+php -l index.php > script_out.log
 
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
